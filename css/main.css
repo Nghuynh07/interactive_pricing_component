@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 100%;
+  position: relative;
+  background-color: #f9faff;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  border-radius: 0 0 0 20rem;
+  background-color: #f1f5fe;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+.container .bg-img {
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.container .component {
+  max-width: 60rem;
+  min-height: 80vh;
+  z-index: 1000;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: green3;
+  transition: all 0.3s;
+}
+.container .component .section-1 {
+  margin-top: 5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .component .section-1-heading {
+  font-size: clamp(2.3rem, 3vw, 2.5rem);
+  color: hsl(227deg, 35%, 25%);
+  font-weight: 800;
+  z-index: 1;
+}
+.container .component .section-1-text-wrapper {
+  max-width: fit-content;
+  z-index: 1;
+}
+.container .component .section-1-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.2rem);
+  color: hsl(227deg, 35%, 25%);
+}
+.container .component .section-2 {
+  background-color: hsl(230deg, 100%, 99%);
+  border-radius: 8px;
+  box-shadow: 0 0 3rem hsl(224deg, 65%, 95%);
+  position: relative;
+  margin-inline: 2rem;
+}
+.container .component .section-2 .slider-bg {
+  position: absolute;
+  background-color: green;
+  z-index: 1;
+}
+.container .component .section-2-range {
+  appearance: none;
+  background-color: hsl(224deg, 65%, 95%);
+  height: 0.7rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.container .component .section-2-range::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  background: url(../images/icon-slider.svg) center no-repeat, hsl(174deg, 86%, 45%);
+  border: none;
+}
+.container .component .section-2 input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  background: url(../images/icon-slider.svg) center no-repeat, hsl(174deg, 86%, 45%);
+  border: none;
+}
+.container .component .section-2-main-content {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .component .section-2-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.container .component .section-2-100k {
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: hsl(225deg, 20%, 60%);
+  align-self: center;
+  margin-top: 1rem;
+}
+.container .component .section-2-price {
+  color: hsl(225deg, 20%, 60%);
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+  display: flex;
+  align-items: center;
+}
+.container .component .section-2-price span {
+  font-size: 3.5rem;
+  color: hsl(227deg, 35%, 25%);
+  font-weight: 800;
+  margin-right: 0.5rem;
+}
+.container .component .section-2-billing-infos {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+  align-items: center;
+}
+.container .component .section-2-billing {
+  font-size: 1.1rem;
+  color: hsl(225deg, 20%, 60%);
+}
+.container .component .section-2-yearly {
+  font-size: 1.1rem;
+  color: hsl(225deg, 20%, 60%);
+  margin-right: 1.5rem;
+}
+.container .component .section-2-btn {
+  position: relative;
+  width: 5rem;
+  height: 2.6rem;
+  background-color: hsl(224deg, 65%, 95%);
+  border-radius: 5rem;
+  margin: 0 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.container .component .section-2-btn::before {
+  content: "";
+  position: absolute;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: hsl(0deg, 0%, 100%);
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: transform 0.2s;
+  pointer-events: none;
+}
+.container .component .section-2 .change.section-2-btn {
+  background-color: hsl(174deg, 77%, 80%);
+}
+.container .component .section-2 .change.section-2-btn::before {
+  transform: translateX(190%) translateY(-50%);
+  transition: transform 0.2s;
+}
+.container .component .section-2-discount {
+  color: hsl(15deg, 100%, 70%);
+  padding: 0.3rem 0.5rem;
+  border-radius: 10rem;
+  background-color: hsl(14deg, 92%, 95%);
+}
+.container .component .section-2-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+  padding: 2.5rem 4rem;
+  border-top: 0.05rem solid hsl(224deg, 65%, 95%);
+}
+.container .component .section-2-text {
+  font-size: 1.1rem;
+  color: hsl(225deg, 20%, 60%);
+  margin: 1rem 0;
+}
+.container .component .section-2-text img {
+  margin-right: 1rem;
+}
+.container .component .section-2-link {
+  background-color: hsl(227deg, 35%, 25%);
+  padding: 1rem 3.5rem;
+  color: hsl(223deg, 50%, 87%);
+  border-radius: 30rem;
+  font-size: 1.3rem;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+.container .component .section-2-link:hover {
+  color: hsl(230deg, 100%, 99%);
+}
+@media (max-width: 500px) {
+  .container .component {
+    min-height: 90vh;
+    justify-content: space-evenly;
+  }
+  .container .discount {
+    display: none;
+  }
+  .container .section-1-text-wrapper {
+    width: 16rem;
+  }
+  .container .section-2 {
+    margin-top: 5em;
+  }
+  .container .section-2-bottom {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 2rem;
+  }
+  .container .section-2-100k {
+    margin: auto;
+  }
+  .container .section-2-range {
+    margin-top: 1rem;
+  }
+  .container .section-2-price {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .section-2-bottom {
+    margin-top: 10rem;
+  }
+  .container .section-2-link {
+    margin-top: 2.5rem;
+  }
+  .container .section-2-billing-infos {
+    margin-top: 5rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

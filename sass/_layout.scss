@@ -1,0 +1,288 @@
+@use "base.scss" as *;
+
+.container {
+  min-height: 100vh;
+  max-width: 100%;
+  position: relative;
+  background-color: #f9faff;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    border-radius: 0 0 0 20rem;
+    background-color: #f1f5fe;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+
+  .bg-img {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .component {
+    max-width: 60rem;
+    min-height: 80vh;
+    z-index: 1000;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: green3;
+    transition: all 0.3s;
+    .section-1 {
+      margin-top: 5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-heading {
+        font-size: clamp(2.3rem, 3vw, 2.5rem);
+        color: $color-desaturated-blue;
+        font-weight: 800;
+        z-index: 1;
+      }
+
+      &-text-wrapper {
+        max-width: fit-content;
+        z-index: 1;
+      }
+
+      &-text {
+        font-size: clamp(1.2rem, 2.5vw, 1.2rem);
+        color: $color-desaturated-blue;
+      }
+    }
+
+    .section-2 {
+      background-color: $color-very-pale-blue;
+      border-radius: 8px;
+      box-shadow: 0 0 3rem $color-light-grayish-blue;
+      position: relative;
+      margin-inline: 2rem;
+
+      .slider-bg {
+        position: absolute;
+        background-color: green;
+        // width: 10rem;
+        // height: 10rem;
+        z-index: 1;
+      }
+
+      &-range {
+        appearance: none;
+        background-color: $color-light-grayish-blue;
+        height: 0.7rem;
+        border-radius: 5rem;
+        cursor: pointer;
+      }
+
+      &-range::-moz-range-thumb {
+        -moz-appearance: none;
+        width: 3.3rem;
+        height: 3.3rem;
+        border-radius: 50%;
+        background: url(../images/icon-slider.svg) center no-repeat,
+          hsl(174, 86%, 45%);
+        border: none;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 3.3rem;
+        height: 3.3rem;
+        border-radius: 50%;
+        background: url(../images/icon-slider.svg) center no-repeat,
+          hsl(174, 86%, 45%);
+        border: none;
+      }
+
+      &-main-content {
+        padding: 5rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      &-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+      }
+
+      &-100k {
+        font-size: 1.4rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: $color-grayish-blue;
+        align-self: center;
+        margin-top: 1rem;
+      }
+      &-price {
+        color: $color-grayish-blue;
+        font-size: 1.4rem;
+        letter-spacing: 0.15rem;
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 3.5rem;
+          color: $color-desaturated-blue;
+          font-weight: 800;
+          margin-right: 0.5rem;
+        }
+      }
+      &-billing-infos {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5rem;
+        align-items: center;
+      }
+
+      &-billing {
+        @include smallFontStyles;
+      }
+
+      &-yearly {
+        @include smallFontStyles;
+        margin-right: 1.5rem;
+      }
+
+      &-btn {
+        position: relative;
+        width: 5rem;
+        height: 2.6rem;
+        background-color: $color-light-grayish-blue;
+        border-radius: 5rem;
+        margin: 0 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 1.4rem;
+          width: 1.4rem;
+          background-color: $color-white;
+          top: 50%;
+          left: 0.5rem;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          transition: transform 0.2s;
+          pointer-events: none;
+        }
+      }
+
+      .change.section-2-btn {
+        background-color: hsl(174, 77%, 80%);
+      }
+      .change.section-2-btn::before {
+        transform: translateX(190%) translateY(-50%);
+        transition: transform 0.2s;
+      }
+
+      &-discount {
+        color: $color-light-red;
+        padding: 0.3rem 0.5rem;
+        border-radius: 10rem;
+        background-color: $color-light-rayish-red;
+      }
+
+      &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4.5rem;
+        padding: 2.5rem 4rem;
+        border-top: 0.05rem solid $color-light-grayish-blue;
+      }
+
+      &-services {
+        // margin-top: 3rem;
+      }
+
+      &-text {
+        @include smallFontStyles;
+        margin: 1rem 0;
+
+        img {
+          margin-right: 1rem;
+        }
+      }
+
+      &-link {
+        background-color: $color-desaturated-blue;
+        padding: 1rem 3.5rem;
+        // margin-top: 3rem;
+        color: hsl(223, 50%, 87%);
+        border-radius: 30rem;
+        font-size: 1.3rem;
+        transition: color 0.2s;
+        font-weight: 600;
+        &:hover {
+          color: hsl(230, 100%, 99%);
+        }
+      }
+
+      &-line {
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+  }
+
+  @media (max-width: 500px) {
+    .component {
+      min-height: 90vh;
+      justify-content: space-evenly;
+    }
+
+    .discount {
+      display: none;
+    }
+    .section-1 {
+      &-text-wrapper {
+        width: 16rem;
+      }
+    }
+    .section-2 {
+      margin-top: 5em;
+      &-bottom {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 2rem;
+      }
+
+      &-100k {
+        margin: auto;
+      }
+
+      &-range {
+        margin-top: 1rem;
+      }
+      &-price {
+        position: absolute;
+        top: 15rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &-bottom {
+        margin-top: 10rem;
+      }
+      &-link {
+        margin-top: 2.5rem;
+      }
+
+      &-billing-infos {
+        margin-top: 5rem;
+      }
+    }
+  }
+}

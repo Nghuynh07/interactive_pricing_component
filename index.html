@@ -11,12 +11,67 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/script.js"></script>
     <title>Interactive pricing component</title>
   </head>
   <body>
-    Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card
-    required. Pageviews $ /month Monthly Billing Yearly Billing 25% discount
-    Unlimited websites 100% data ownership Email reports Start my trial
+    <main class="container">
+      <img class="bg-img" src="images/pattern-circles.svg" alt="" />
+      <div class="component">
+        <section class="section-1">
+          <h1 class="section-1-heading">Simple, traffic-based pricing</h1>
+          <div class="section-1-text-wrapper">
+            <p class="section-1-text">
+              Sign-up for our 30-day trial. No credit card required.
+            </p>
+          </div>
+        </section>
+        <section class="section-2">
+          <div class="section-2-top">
+            <div class="section-2-main-content">
+              <div class="section-2-group">
+                <p class="section-2-100k">100k pageviews</p>
+                <p class="section-2-price"><span>$16.00</span> / month</p>
+              </div>
+              <div class="slider-bg"></div>
+              <input
+                type="range"
+                step="20"
+                min="0"
+                max="100"
+                class="section-2-range"
+              />
+            </div>
+            <div class="section-2-billing-infos">
+              <p class="section-2-billing">Monthly Billing</p>
+              <div class="section-2-btn"></div>
+              <p class="section-2-yearly">Yearly Billing</p>
+              <p class="section-2-discount">
+                25% <span class="discount"> discount</span>
+              </p>
+            </div>
+          </div>
+          <div class="section-2-bottom">
+            <div class="section-2-services">
+              <p class="section-2-text">
+                <img src="images/icon-check.svg" alt="Check" />
+                Unlimited websites
+              </p>
+
+              <p class="section-2-text">
+                <img src="images/icon-check.svg" alt="Check" />
+                100% data ownership
+              </p>
+              <p class="section-2-text">
+                <img src="images/icon-check.svg" alt="Check" />
+                Email reports
+              </p>
+            </div>
+            <a href="#" class="section-2-link"> Start my trial </a>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
