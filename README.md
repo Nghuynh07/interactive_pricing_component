@@ -37,8 +37,8 @@ I learned about HTML input[type="range"] element. I learned how it work, how to 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Nghuynh07/interactive_pricing_component)
+- Live Site URL: [Add live site URL here](https://splendid-licorice-e9e13a.netlify.app/)
 
 ## My process
 
